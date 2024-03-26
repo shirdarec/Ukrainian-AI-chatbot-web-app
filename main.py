@@ -20,8 +20,8 @@ from essential_chain import initialize_chain
 from vanilla_chain import get_llm_chain
 
 st.set_page_config(
-    page_title="Chat with the Streamlit docs via LangChain, Collect user feedback via Trubrics and LangSmith!",
-    page_icon="🦜",
+    page_title="Chat with nav.no via LangChain, Collect user feedback via Trubrics and LangSmith!",
+    page_icon="💙💛",
 )
 
 # ... [rest of the code above]
@@ -66,7 +66,7 @@ langchain_endpoint = "https://api.smith.langchain.com"
 col1, col2, col3 = st.columns([0.6, 3, 1])
 
 with col2:
-    st.image("images/logo.png", width=460)
+    st.image("images/ukraineflag.png", width=460)
 
 st.write("")
 
@@ -94,7 +94,7 @@ system_prompt = system_prompt.strip().replace("{", "{{").replace("}", "}}")
 
 chain_type = st.sidebar.radio(
     "Choose your LLM:",
-    ("Classic `GPT 3.5` LLM", "RAG LLM for Streamlit Docs ✨"),
+    ("Classic `GPT 3.5` LLM", "RAG LLM for nav.no"),
     index=1,
 )
 
@@ -151,7 +151,7 @@ def _reset_feedback():
 
 MAX_CHAR_LIMIT = 500  # Adjust this value as needed
 
-if prompt := st.chat_input(placeholder="Ask a question about the Streamlit docs!"):
+if prompt := st.chat_input(placeholder="Ask a question about nav.no!"):
 
     if len(prompt) > MAX_CHAR_LIMIT:
         st.warning(f"⚠️ Your input is too long! Please limit your input to {MAX_CHAR_LIMIT} characters.")
@@ -165,7 +165,7 @@ if prompt := st.chat_input(placeholder="Ask a question about the Streamlit docs!
 
             input_structure = {"input": prompt}
 
-            if chain_type == "RAG LLM for Streamlit Docs ✨":
+            if chain_type == "RAG LLM for nav.no":
                 input_structure = {
                     "question": prompt,
                     "chat_history": [

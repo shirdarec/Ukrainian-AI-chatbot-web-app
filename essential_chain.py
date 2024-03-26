@@ -3,7 +3,6 @@
 #__import__('pysqlite3')
 #import sys
 #sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -20,7 +19,7 @@ def initialize_chain(system_prompt, _memory):
 
     # Load markdown documents
     documents = []
-    folder_path = "./markdown_files"
+    folder_path = "./markdown_o"
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
@@ -28,8 +27,16 @@ def initialize_chain(system_prompt, _memory):
         for file_name in files:
             if file_name.endswith(".md"):
                 file_path = os.path.join(root, file_name)
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                except UnicodeDecodeError:
+                    try:
+                        with open(file_path, 'r', encoding='ISO-8859-1') as f:
+                            content = f.read()
+                    except UnicodeDecodeError as e:
+                        st.error(f"Error reading file {file_path}: {e}")
+                        continue  # Skip this file and move to the next
                 documents.append(Document(page_content=content, metadata={}))
     
     if documents:
@@ -40,9 +47,7 @@ def initialize_chain(system_prompt, _memory):
         vectorstore = Chroma.from_documents(document_chunks, embeddings)
 
         # Initialize the ConversationalRetrievalChain with the system_prompt and memory parameters
-        # qa = ConversationalRetrievalChain.from_llm(llm, vectorstore.as_retriever(), memory=memory)
         qa = ConversationalRetrievalChain.from_llm(llm, vectorstore.as_retriever(), memory=_memory)
-
         
         return qa
     else:
