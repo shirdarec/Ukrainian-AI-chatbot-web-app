@@ -1,10 +1,9 @@
-"""
+
 # If trying this app locally, comment out these 3 lines
 __import__("pysqlite3")
 import sys
 sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
 
-"""
 import os
 import streamlit as st
 from langchain.callbacks.tracers.langchain import wait_for_all_tracers
