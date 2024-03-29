@@ -13,7 +13,7 @@ from langchain.schema.runnable import RunnableConfig
 from langsmith import Client
 from streamlit_feedback import streamlit_feedback
 
-from langchain_community.vectorstores import Chroma
+#from langchain_community.vectorstores import Chroma
 from langchain_openai import ChatOpenAI
 
 from essential_chain import initialize_chain
