@@ -14,7 +14,7 @@ from langsmith import Client
 from streamlit_feedback import streamlit_feedback
 
 #from langchain_community.vectorstores import Chroma
-from langchain_openai import ChatOpenAI
+#from langchain_openai import ChatOpenAI
 
 from essential_chain import initialize_chain
 from vanilla_chain import get_llm_chain
