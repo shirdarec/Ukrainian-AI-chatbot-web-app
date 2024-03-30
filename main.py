@@ -13,6 +13,22 @@ from langchain.schema.runnable import RunnableConfig
 from langsmith import Client
 from streamlit_feedback import streamlit_feedback
 
+# Define a helper function to get secrets
+def get_secret(key):
+    # Try to get secret from Streamlit's secrets (useful for Streamlit Sharing)
+    try:
+        return st.secrets[key]
+    except AttributeError:
+        # Fallback to environment variable (for Render or local execution)
+        return os.getenv(key)
+
+# Use the get_secret function to set environment variables for LangSmith and OpenAI
+os.environ["OPENAI_API_KEY"] = get_secret("api_keys")["OPENAI_API_KEY"]
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
+os.environ["LANGCHAIN_PROJECT"] = "Streamlit Demo"
+os.environ["LANGCHAIN_API_KEY"] = get_secret("api_keys")["LANGSMITH_API_KEY"]
+
 #from langchain_community.vectorstores import Chroma
 #from langchain_openai import ChatOpenAI
 
