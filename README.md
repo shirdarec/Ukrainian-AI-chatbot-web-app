@@ -1,10 +1,10 @@
-# Chat with the Streamlit docs, collect feedback with Trubrics & LangSmith.
+# Chat with the www.nav.no, collect feedback with Trubrics & LangSmith.
 
 <br>
 <br>
 
 <p align="center">
-  <img src="https://github.com/CharlyWargnier/LangchainRAG-Trubrics-Langsmith/assets/27242399/e4e7f7b0-228a-4e36-9cec-e0df4c072e43" width="400">
+  <img src= width="400">
 </p>
 
 <br>
