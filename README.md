@@ -17,7 +17,7 @@
 ## Overview of the App
 
 <p align="center">
-  <img src="https://github.com/CharlyWargnier/LangchainRAG-Trubrics-Langsmith/assets/27242399/28b28ff9-c289-4c66-b44d-f99bc4f1c0ba" width="600">
+  <img src="https://github.com/shirdarec/Ukrainian-AI-chatbot/blob/main/images/streamlit.PNG width="600">
 </p>
 
 This demo app made with [Streamlit](https://streamlit.io/) allows users to chat with the [Streamlit docs](https://docs.streamlit.io/) using [LangChain](https://www.langchain.com/)'s Retrieval-Augmented Generation (RAG) capabilities. By integrating the [Trubrics' Feedback component](https://github.com/trubrics/streamlit-feedback), the app provides a dynamic way to capture user feedback, which is then monitored in [LangSmith](https://www.langchain.com/langsmith) for further analyses and improvements.
