@@ -32,6 +32,9 @@ You can try out the demo on Streamlit Community Cloud
 
 Ensure you have the necessary API keys which will be provided in a secrets.toml file. 
 
+## Running the app
+
+To run the app, type: streamlit run main.py on your command line 
 ## Need Support?
 
 If you require assistance or have any questions, feel free to reach out to me on X (formerly Twitter) at [@datachaz](https://twitter.com/datachaz) or on the [Streamlit forums](https://discuss.streamlit.io/)!
