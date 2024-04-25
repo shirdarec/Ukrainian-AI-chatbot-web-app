@@ -30,23 +30,7 @@ You can try out the demo on Streamlit Community Cloud
 
 ## Prerequisites
 
-Ensure you have the necessary API keys:
-
-### Get a LangSmith API key
-
-Sign up for LangSmith at [smith.langchain.com](https://smith.langchain.com/) and generate an API Key.
-To do this, click on the `API Key` icon and then click on `Create API Key` (make sure to copy it).
-
-<p align="center">
-  <img src="https://github.com/CharlyWargnier/LangchainRAG-Trubrics-Langsmith/assets/27242399/95ea6ca4-7ddf-4ed6-913f-56d4d9f114c4" width="600">
-</p>
-
-### Get an OpenAI API key
-
-You can get your own OpenAI API key by following these instructions:
-1. Go to https://platform.openai.com/account/api-keys.
-2. Click on the `+ Create new secret key` button.
-3. Next, enter an identifier name (optional) and click on the `Create secret key` button.
+Ensure you have the necessary API keys which will be provided in a secrets.toml file. 
 
 ## Need Support?
 
