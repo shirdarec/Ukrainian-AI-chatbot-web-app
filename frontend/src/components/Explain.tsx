@@ -1,4 +1,5 @@
 // import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -38,18 +39,47 @@ const Button = styled.button`
   border-radius: 20px;
 `;
 
+const infoPages = [
+  {
+    niceName: "Case Processing Items",
+    name: "case-processing-items",
+  },
+  {
+    niceName: "Payment Dates",
+    name: "payment-dates",
+  },
+  {
+    niceName: "Financial Support",
+    name: "financial-support",
+  },
+  {
+    niceName: "Rates",
+    name: "rates",
+  },
+];
+
+const info = ["hello", "goodbye", "ciao", "yo"];
+
 function Explain() {
+  const [selected, setSelected] = useState("");
+
   return (
     <>
       <Box />
       <Container>
         Explain
         <Buttons>
-          <Button>Case Processing Items</Button>
-          <Button>Payment Dates</Button>
-          <Button>Financial Support</Button>
-          <Button>Rates</Button>
+          {infoPages.map((item, index) => (
+            <Button
+              onClick={() => {
+                setSelected(item.name);
+              }}
+            >
+              {item.niceName}
+            </Button>
+          ))}
         </Buttons>
+        {selected}
       </Container>
     </>
   );
