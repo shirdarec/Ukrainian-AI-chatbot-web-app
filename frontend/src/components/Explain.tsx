@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 450px;
+  width: x;
   height: 700px;
   border-radius: 20px;
   font-size: 20px;
@@ -12,13 +12,13 @@ const Container = styled.div`
 const Box = styled.div`
   display: flex;
   background: #ffffff;
-  width: 450px;
-  height: 700px;
+  width: 50%;
+  height: 100%;
   border-radius: 20px;
   z-index: -99;
   position: absolute;
-  top: 10px;
-  right: 35%;
+  top: 0%;
+  left: 25%;
 `;
 
 const Buttons = styled.div`
@@ -27,29 +27,31 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40%;
+  margin-top: 50%;
 `;
 
 const Button = styled.button`
-  width: 70%;
+  width: 200%;
   background: #b5b5b5;
-  margin: 2%;
+  margin: 3%;
   font-size: 70%;
   border-radius: 20px;
 `;
 
 function Explain() {
   return (
-    <Container>
+    <>
       <Box />
-      Explain
-      <Buttons>
-        <Button>Case Processing Items</Button>
-        <Button>Payment Dates</Button>
-        <Button>Financial Support</Button>
-        <Button>Rates</Button>
-      </Buttons>
-    </Container>
+      <Container>
+        Explain
+        <Buttons>
+          <Button>Case Processing Items</Button>
+          <Button>Payment Dates</Button>
+          <Button>Financial Support</Button>
+          <Button>Rates</Button>
+        </Buttons>
+      </Container>
+    </>
   );
 }
 

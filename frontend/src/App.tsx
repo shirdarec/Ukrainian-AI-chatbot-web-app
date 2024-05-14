@@ -9,13 +9,13 @@ import Landing from "./components/Landing";
 const Box = styled.div`
   display: flex;
   background: #fc9a0e;
-  width: 450px;
-  height: 700px;
+  width: 50%;
+  height: 100%;
   border-radius: 20px;
   z-index: -100;
   position: absolute;
-  top: 10px;
-  right: 35%;
+  top: 0%;
+  left: 25%;
 `;
 
 function App() {
