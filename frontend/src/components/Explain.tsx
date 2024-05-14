@@ -58,8 +58,6 @@ const infoPages = [
   },
 ];
 
-const info = ["hello", "goodbye", "ciao", "yo"];
-
 function Explain() {
   const [selected, setSelected] = useState("");
 
