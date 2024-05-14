@@ -1,6 +1,6 @@
 import React from "react";
 import Explain from "./components/Explain";
-import { withRouter, Link, Route, Switch } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Converter from "./components/Converter";
 import styled from "styled-components";
@@ -21,10 +21,10 @@ const Box = styled.div`
 function App() {
   return (
     <>
-      <Switch>
-        <Route exact path="/" component={withRouter(Landing)} />
-        <Route exact path="/explain" component={withRouter(Explain)} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<Landing/>} />
+        <Route exact path="/explain" element={<Explain/>} />
+      </Routes>
       <Box />
     </>
   );
