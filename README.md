@@ -26,7 +26,7 @@ This demo app made with [Streamlit](https://streamlit.io/) allows users to chat 
 
 You can try out the demo on Streamlit Community Cloud
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ukrainian-ai-chatbot.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ukrainian-ai-chatbot-web.streamlit.app/)
 
 ## Prerequisites
 
