@@ -10,14 +10,23 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const Streamlit = styled.iframe`
+    @media screen and (max-width: 800px) {
+        width: 300px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 600px;
+    }
+    height: 600px;
+    width: 400px;
+`;
+
 const InfoPage = () => {
   return (
     <Container>
-      <iframe
+      <Streamlit
         src="https://ukrainian-ai-chatbot.streamlit.app/?embed=true"
-        height="600"
-        width="400"
-      ></iframe>
+      ></Streamlit>
       <Link exact to="/explain">
         Explain
       </Link>

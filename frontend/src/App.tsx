@@ -17,6 +17,7 @@ const Box = styled.div`
   position: absolute;
   top: 0%;
   left: 25%;
+  min-width: 290px;
 `;
 
 function App() {
