@@ -18,7 +18,9 @@ const InfoPage = () => {
         height="600"
         width="400"
       ></iframe>
-    <Link exact to="/explain">Explain</Link>
+      <Link exact to="/explain">
+        Explain
+      </Link>
     </Container>
   );
 };

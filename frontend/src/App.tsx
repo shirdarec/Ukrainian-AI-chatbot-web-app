@@ -23,12 +23,14 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Landing/>} />
-        <Route exact path="/explain" element={<Explain/>} />
-        <Route exact path="/info" element={<InfoPage/>} />
+        <Route exact path="/" element={<Landing />} />
+        <Route exact path="/explain" element={<Explain />} />
+        <Route exact path="/info" element={<InfoPage />} />
       </Routes>
       <Box />
-      <Link exact to="/">Home</Link>
+      <Link exact to="/">
+        Home
+      </Link>
     </>
   );
 }

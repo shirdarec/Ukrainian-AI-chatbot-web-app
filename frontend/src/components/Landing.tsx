@@ -20,7 +20,9 @@ const Landing = () => {
   return (
     <Container>
       <Logo src={img} />
-      <Link exact to="/info">Chat</Link>
+      <Link exact to="/info">
+        Chat
+      </Link>
     </Container>
   );
 };
