@@ -55,7 +55,7 @@ const infoPages = [
   {
     niceName: "Rates",
     name: "rates",
-  },
+  } 
 ];
 
 function Explain() {

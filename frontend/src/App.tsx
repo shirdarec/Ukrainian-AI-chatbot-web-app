@@ -5,6 +5,7 @@ import "./App.css";
 import Converter from "./components/Converter";
 import styled from "styled-components";
 import Landing from "./components/Landing";
+import InfoPage from "./components/InfoPage";
 
 const Box = styled.div`
   display: flex;
@@ -24,8 +25,10 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Landing/>} />
         <Route exact path="/explain" element={<Explain/>} />
+        <Route exact path="/info" element={<InfoPage/>} />
       </Routes>
       <Box />
+      <Link exact to="/">Home</Link>
     </>
   );
 }

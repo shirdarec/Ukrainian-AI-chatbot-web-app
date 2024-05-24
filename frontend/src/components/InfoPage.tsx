@@ -1,12 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import img from "../assets/1.png";
-
-const Logo = styled.img`
-  width: 40%;
-  border-radius: 20px;
-`;
 
 const Container = styled.div`
   width: 100%;
@@ -16,13 +10,17 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Landing = () => {
+const InfoPage = () => {
   return (
     <Container>
-      <Logo src={img} />
-      <Link exact to="/info">Chat</Link>
+      <iframe
+        src="https://ukrainian-ai-chatbot.streamlit.app/?embed=true"
+        height="600"
+        width="400"
+      ></iframe>
+    <Link exact to="/explain">Explain</Link>
     </Container>
   );
 };
 
-export default Landing;
+export default InfoPage;
